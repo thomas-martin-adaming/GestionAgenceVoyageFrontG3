@@ -1,0 +1,130 @@
+<div class="panel-header">
+    <div class="header text-center">
+      <h2 class="title">Voyages</h2>
+      <p class="category">Création de nouveau voyages
+        <a href="https://scttcper.github.io/ngx-toastr/" target="_blank"></a>
+      </p>
+    </div>
+  </div>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title" style="margin-left: 30px;">Ajouter un vol</h4>
+                    </div>
+                    <div class="marge-journey">
+                        <form (ngSubmit)="saveFlight()">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Départ</label>
+                                        <input type="text" class="form-control" placeholder="ville de départ..."
+                                            [(ngModel)]="flight.originLocationCode" name="originLocationCode">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Arrivé</label>
+                                        <input type="text" class="form-control" placeholder="ville d'arrivée..."
+                                            [(ngModel)]="flight.destinationLocationCode" name="destinationLocationCode">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>compagnie aérienne</label>
+                                        <input type="text" class="form-control" placeholder="Selectionner la compagnie..."
+                                            [(ngModel)]="flight.operatingCompanyId" name="operatingCompanyId">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Numéro du vol</label>
+                                        <input type="flightNumber" class="form-control"
+                                            placeholder="numéro du vol..." [(ngModel)]="flight.flightNumber"
+                                            name="flightNumber">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Date et heure de départ</label>
+                                        <input type="startDateAndTime" class="form-control"
+                                            placeholder="date de départ..." [(ngModel)]="flight.startDateAndTime"
+                                            name="startDateAndTime">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Date et heure d'arrivée</label>
+                                        <input type="text" class="form-control" placeholder="Date de retour..."
+                                            [(ngModel)]="flight.endDateAndTime" name="endDateAndTime">
+                                    </div>
+                                </div>
+                        
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <input type="otherDetails" class="form-control"
+                                            placeholder="autres détails..." [(ngModel)]="flight.otherDetails"
+                                            name="otherDetails">
+                                    </div>
+                                </div>
+                            
+                        
+                            </div>
+                            <button class="btn btn-info btn-fill pull-right">Ajouter</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title" style="margin-left: 30px;">Liste des vols</h4>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <!--- <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>-->
+                                    <th>Départ</th>
+                                    <th>Arrivé</th>
+                                    <th>Compagnie aerienne</th>
+                                    <th>Numéro du vol</th>
+                                    <th>Heure de départ</th>
+                                    <th>Heure d'arrivée</th>
+                                    <th>action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let u of flights">
+                                    <td>{{u.originLocationCode}}</td>
+                                    <td>{{u.destinationLocationCode}}</td>
+                                    <td>{{u.operatingCompanyId}}</td>
+                                    <td>{{u.flightNumber}}</td>
+                                    <td>{{u.startDateAndTime}}</td>
+                                    <td>{{u.endDateAndTime}}</td>
+                                    <td><button (click)="deleteFlight(u.idJourney)">Delete</button></td>
+                                    <!--  <td *ngFor="let cell of row">{{cell}}</td>-->
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
