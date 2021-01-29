@@ -23,14 +23,14 @@
                                     <div class="form-group">
                                         <label>location Code</label>
                                         <input type="text" class="form-control" placeholder="Code de location..."
-                                            [(ngModel)]="location.locationCode" name="originLocationCode">
+                                            [(ngModel)]="location.locationCode" name="locationCode">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>location Name</label>
                                         <input type="text" class="form-control" placeholder="Nom de Location..."
-                                            [(ngModel)]="location.locationName" name="destinationLocationCode">
+                                            [(ngModel)]="location.locationName" name="locationCode">
                                     </div>
                                 </div>
                             </div>
@@ -39,10 +39,10 @@
                                     <div class="form-group">
                                         <label>location Type</label>
                                         <select [(ngModel)]="location.locationType" class="form-control"
-                                            name="enabled">
-                                            <option [value]="AIRPORT">Airport</option>
-                                            <option [value]="SEAPORT">Seaport</option>
-                                            <option [value]="TRAINSTATION">Train Station</option>
+                                            name="locationType">
+                                            <option valeur="locationType.AIRPORT">AIRPORT</option>
+                                            <option valeur="locationType.SEAPORT">SEAPORT</option>
+                                            <option valeur="locationType.TRAINSTATION">TRAINStATION</option>
                                           </select>
                                           
                                     </div>
