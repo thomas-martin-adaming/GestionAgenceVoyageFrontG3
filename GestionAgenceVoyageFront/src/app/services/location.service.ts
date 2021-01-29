@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class LocationService {
 
-  private baseURL = 'http://localhost:9004/microservice-location/locations'
-  constructor(private httpClient: HttpClient) { }
+ private baseURL = 'http://localhost:9004/microservice-location/locations'
+ constructor(private httpClient: HttpClient) { }
 
   public findAll(): Observable<any> {
     return this.httpClient.get(this.baseURL);
