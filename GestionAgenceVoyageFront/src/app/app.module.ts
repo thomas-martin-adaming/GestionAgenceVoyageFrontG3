@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { MatTabsModule } from '@angular/material/tabs';
+
 
 
 
@@ -26,9 +28,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTabsModule,
     ToastrModule.forRoot()
   ],
-  exports: [
-  
-  ],
+
   declarations: [
     AppComponent,
     AdminLayoutComponent,

@@ -11,8 +11,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { JourneyComponent } from '../../journey/journey.component';
+<<<<<<< HEAD
 import { MatTabsModule } from '@angular/material/tabs';
 
+=======
+import { RoleComponent } from '../../role/role.component';
+import { UtilisateurComponent } from '../../utilisateur/utilisateur.component';
+import { LocationComponent } from '../../location/location.component';
+import { LoginComponent } from '../../login/login.component';
+>>>>>>> c90bdd0cd6003ae5785d8c9740d2d0876508cbf9
 
 @NgModule({
   imports: [
@@ -35,7 +42,11 @@ import { MatTabsModule } from '@angular/material/tabs';
     TableListComponent,
     UpgradeComponent,
     NotificationsComponent,
-    JourneyComponent
+    JourneyComponent,
+    UtilisateurComponent,
+    RoleComponent,
+    LocationComponent,
+    LoginComponent
     
   ]
 })
