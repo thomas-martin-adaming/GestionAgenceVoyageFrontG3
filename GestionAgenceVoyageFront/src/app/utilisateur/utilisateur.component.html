@@ -1,0 +1,48 @@
+<div class="panel-header">
+    <div class="header text-center">
+      <h2 class="title">Utilisateur</h2>
+      <p class="category">Gestion des Utilisateur
+        <a href="https://scttcper.github.io/ngx-toastr/" target="_blank"></a>
+      </p>
+    </div>
+  </div>
+  
+  <div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title" style="margin-left: 30px;">Liste des Utilisateur</h4>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID Utilisateur</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
+                                    <th>Roles</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let u of utilisateurs">
+                                    <td>{{u.idUtilisateur}}</td>
+                                    <td>{{u.nomUtilisateur}}</td>
+                                    <td>{{u.prenomUtilisateur}}</td>
+                                    <td>{{u.username}}</td>
+                                    <td>{{u.password}}</td>
+                                    <td>{{u.roles.libelle}}</td>
+                                    <td><button (click)="delete(u.idUtilisateur)">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
