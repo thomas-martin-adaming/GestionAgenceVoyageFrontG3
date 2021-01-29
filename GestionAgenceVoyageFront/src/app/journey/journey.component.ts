@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
+import { MatTabsModule } from '@angular/material/tabs';
 import { Flight } from '../model/flight';
 import { JourneyService } from '../services/journey.service';
 
@@ -7,12 +8,15 @@ import { JourneyService } from '../services/journey.service';
   templateUrl: './journey.component.html',
   styleUrls: ['./journey.component.css']
 })
+
+
 export class JourneyComponent implements OnInit {
   flights: Flight[];
   flight: Flight = new Flight();
   constructor(private journeyService: JourneyService) { }
 
 
+  
   ngOnInit(): void {
     this.findAllFlight();
   }

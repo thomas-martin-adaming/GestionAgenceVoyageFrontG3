@@ -11,6 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { JourneyComponent } from '../../journey/journey.component';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 @NgModule({
   imports: [
@@ -19,8 +21,15 @@ import { JourneyComponent } from '../../journey/journey.component';
     FormsModule,
     ChartsModule,
     NgbModule,
+    MatTabsModule,
     ToastrModule.forRoot()
   ],
+  exports: [
+ 
+    MatTabsModule,
+  
+  ],
+
   declarations: [
     UserProfileComponent,
     TableListComponent,
