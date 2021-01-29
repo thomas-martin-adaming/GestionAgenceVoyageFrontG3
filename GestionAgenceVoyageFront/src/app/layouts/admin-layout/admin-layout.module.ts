@@ -11,10 +11,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { JourneyComponent } from '../../journey/journey.component';
-import { RoleComponent } from '../../role/role.component';
+import { MatTabsModule } from '@angular/material/tabs';
 import { UtilisateurComponent } from '../../utilisateur/utilisateur.component';
+import { RoleComponent } from '../../role/role.component';
 import { LocationComponent } from '../../location/location.component';
 import { LoginComponent } from '../../login/login.component';
+
 
 @NgModule({
   imports: [
@@ -23,8 +25,15 @@ import { LoginComponent } from '../../login/login.component';
     FormsModule,
     ChartsModule,
     NgbModule,
+    MatTabsModule,
     ToastrModule.forRoot()
   ],
+  exports: [
+ 
+    MatTabsModule,
+  
+  ],
+
   declarations: [
     UserProfileComponent,
     TableListComponent,
